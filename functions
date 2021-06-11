@@ -60,8 +60,8 @@ systemctl_redirect () {
 
 # Read in our configuration
 if [ -z "${BOOTUP:-}" ]; then
-    if [ -f /etc/sysconfig/init ]; then
-        . /etc/sysconfig/init
+    if [ -f /etc/init ]; then
+        . /etc/init
     else
         # verbose ->> very (very!) old bootup look (prior to RHL-6.0?)
         # color ->> default bootup look
@@ -288,10 +288,10 @@ daemon() {
     # make sure it doesn't core dump anywhere unless requested
     corelimit="ulimit -S -c ${DAEMON_COREFILE_LIMIT:-0}"
 
-    # if they set NICELEVEL in /etc/sysconfig/foo, honor it
+    # if they set NICELEVEL in /etc/foo, honor it
     [ -n "${NICELEVEL:-}" ] && nice="nice -n $NICELEVEL"
 
-    # if they set CGROUP_DAEMON in /etc/sysconfig/foo, honor it
+    # if they set CGROUP_DAEMON in /etc/foo, honor it
     if [ -n "${CGROUP_DAEMON}" ]; then
         if [ ! -x /bin/cgexec ]; then
             echo -n "Cgroups not installed"; warning

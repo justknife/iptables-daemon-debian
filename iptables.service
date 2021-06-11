@@ -1,6 +1,6 @@
 [Unit]
 Description=IPv4 firewall with iptables
-AssertPathExists=/etc/sysconfig/iptables
+AssertPathExists=/etc/iptables
 Before=network-pre.target
 Wants=network-pre.target
 

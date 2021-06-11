@@ -5,8 +5,8 @@
 # chkconfig: 2345 08 92
 # description:  Starts, stops and saves iptables firewall
 #
-# config: /etc/sysconfig/iptables
-# config: /etc/sysconfig/iptables-config
+# config: /etc/iptables
+# config: /etc/iptables-config
 #
 ### BEGIN INIT INFO
 # Provides: iptables
@@ -22,9 +22,9 @@
 . /etc/init.d/functions
 
 IPTABLES=iptables
-IPTABLES_DATA=/etc/sysconfig/$IPTABLES
+IPTABLES_DATA=/etc/$IPTABLES
 IPTABLES_FALLBACK_DATA=${IPTABLES_DATA}.fallback
-IPTABLES_CONFIG=/etc/sysconfig/${IPTABLES}-config
+IPTABLES_CONFIG=/etc/${IPTABLES}-config
 IPV=${IPTABLES%tables} # ip for ipv4 | ip6 for ipv6
 [ "$IPV" = "ip" ] && _IPV="ipv4" || _IPV="ipv6"
 VAR_SUBSYS_IPTABLES=/var/lock/subsys/$IPTABLES
