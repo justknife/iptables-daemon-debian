@@ -19,12 +19,12 @@ You must install python before use it
     config file path: /etc/iptables
 
 #### Start service: 
-    ```systemctl start iptables```
+    systemctl start iptables
 
 #### Stop service: 
-    ```systemctl stop iptables```
+    systemctl stop iptables
 #### enable service: 
-    ```systemctl enable iptables```
+    systemctl enable iptables
 
 ## License
 
