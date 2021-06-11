@@ -1,4 +1,7 @@
 # iptables-daemon-debian
+
+Notife only debian checked work and supporting. but work on ubuntu)
+
 iptables.service from the debian one love
 
 clone repository: ``` git clone https://github.com/justknife/iptables-daemon-debian.git ```
