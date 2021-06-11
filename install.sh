@@ -2,7 +2,7 @@
 # Only debian supported
 
 chmod +x iptables.init
-mv ./iptables.service /etc/systemd/system/multi-user.target.wants/
+mv ./iptables.service /etc/systemd/system/
 mv ./functions /etc/init.d/
 iptables-save > /etc/iptables
 mkdir /usr/lib/iptables
