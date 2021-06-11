@@ -17,9 +17,15 @@ You must install python before use it
 ## Configuring
     use standart iptables function
     config file path: /etc/iptables
-    start service: systemctl start iptables
-    stop service: systemctl stop iptables
-    enable: systemctl enable iptables
+
+#### Start service: 
+    ```systemctl start iptables```
+
+#### Stop service: 
+    ```systemctl stop iptables```
+#### enable service: 
+    ```systemctl enable iptables```
+
 ## License
 
 This project is licensed under the MIT open source license.
