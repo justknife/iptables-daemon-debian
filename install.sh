@@ -1,6 +1,7 @@
 #!/bin/bash
 # Only debian supported
 
+chmod +x iptables.init
 mv ./iptables.service /etc/systemd/system/multi-user.target.wants/
 mv ./functions /etc/init.d/
 iptables-save > /etc/iptables
